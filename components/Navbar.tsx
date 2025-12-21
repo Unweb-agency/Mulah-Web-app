@@ -53,7 +53,7 @@ const Navbar = () => {
             {/* Mobile */}
             {/* Navigation Bar */}
             <div
-              className={`fixed inset-0 h-screen w-full z-500 bg-white backdrop-blur-sm transform transition-transform duration-300 ease-in-out p-16
+              className={`absolute top-0 right-0 h-screen w-full z-500 bg-white backdrop-blur-sm transform transition-transform duration-300 ease-in-out p-16
             ${isNavOpen ? "translate-x-0" : "translate-x-full"}
             md:hidden
           `}
@@ -80,7 +80,7 @@ const Navbar = () => {
             </div>
 
 
-            {/* Login & Wishlish button */}
+            {/* Login & Wishlist button */}
             <div className='flex flex-row justify-center items-center gap-3.5'>
               {/* <Link href={"#login"}> <span className='text-xs md:text-sm lg:text-base'> Log in </span> </Link> */}
               <Button
