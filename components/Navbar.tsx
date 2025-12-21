@@ -71,7 +71,7 @@ const Navbar = () => {
                     key={index}
                     onClick={() => setIsNavOpen(false)}
                   >
-                    <li className='text-2xl font-medium text-neutral-600'>
+                    <li className='text-2xl text-black font-bold'>
                       {navButtons.name}
                     </li>
                   </Link>

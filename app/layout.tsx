@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${workSans.className} antialiased w-full min-h-screen flex flex-col justify-between items-center`}
+        className={`${workSans.className} antialiased w-full min-h-screen flex flex-col justify-between items-center overflow-x-hidden`}
       >
         <Navbar />
         <Toaster position="top-right" />
