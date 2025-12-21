@@ -27,8 +27,8 @@ const Navbar = () => {
 
   return (
     <>
-      <header className='w-full fixed top-0 z-100 bg-white/20 backdrop-blur-md'>
-        <Container className='w-full'>
+      <header className='w-full sticky top-0 z-100 bg-white/20 backdrop-blur-md'>
+        <Container>
           <nav className='w-full flex flex-row justify-between items-center py-2.5 md:py-3.5'>
             {/* Logo */}
             <div className='flex flex-row justify-center items-center gap-1.5'>
@@ -53,7 +53,7 @@ const Navbar = () => {
             {/* Mobile */}
             {/* Navigation Bar */}
             <div
-              className={`absolute top-0 right-0 min-h-screen w-screen z-500 bg-white backdrop-blur-sm transform transition-transform duration-300 ease-in-out p-16
+              className={`fixed inset-0 h-screen w-full z-500 bg-white backdrop-blur-sm transform transition-transform duration-300 ease-in-out p-16
             ${isNavOpen ? "translate-x-0" : "translate-x-full"}
             md:hidden
           `}
@@ -87,10 +87,9 @@ const Navbar = () => {
                 variant={'default'}
                 className='text-xs md:text-sm rounded-full cursor-pointer bg-linear-to-r from-brandOrange to-brandBlue transition-all ease-in-out duration-200 hover:scale-105'
                 onClick={() => {
-                  setIsNavOpen(false),
-                    setShowWaitlist(true)
-                }
-                }
+                  setIsNavOpen(false);
+                  setShowWaitlist(true);
+                }}
               >
                 Join Waitlist
               </Button>

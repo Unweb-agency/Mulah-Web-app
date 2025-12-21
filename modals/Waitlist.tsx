@@ -19,9 +19,15 @@ const Waitlist: React.FC<WaitlistProps> = ({ onClose }) => {
     const [isError, setIsError] = useState(false);
 
     useEffect(() => {
+        const originalBodyOverflow = document.body.style.overflow;
+        const originalHtmlOverflow = document.documentElement.style.overflow;
+
         document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+
         return () => {
-            document.body.style.overflow = 'unset';
+            document.body.style.overflow = originalBodyOverflow;
+            document.documentElement.style.overflow = originalHtmlOverflow;
         };
     }, []);
 
@@ -33,7 +39,6 @@ const Waitlist: React.FC<WaitlistProps> = ({ onClose }) => {
         
         if (!result.success) {
             setIsError(true);
-            // Use result.error.issues to access the error list safely
             const errorMessage = result.error.issues[0]?.message || "Invalid email";
             toast.error(errorMessage);
             return;
