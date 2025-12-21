@@ -11,7 +11,7 @@ import Waitlist from '@/modals/Waitlist'
 const NavigationButtons = [
   { name: "Features", href: "#features" },
   { name: "How it Works", href: "#how-it-works" },
-  { name: "Stories", href: "#stories" },
+  // { name: "Stories", href: "#stories" },
 ]
 
 const Navbar = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <>
-      <header className='w-full sticky top-0 z-100 bg-white/20 backdrop-blur-md'>
+      <header className='w-full fixed top-0 z-100 bg-white/20 backdrop-blur-md'>
         <Container>
           <nav className='w-full flex flex-row justify-between items-center py-2.5 md:py-3.5'>
             {/* Logo */}

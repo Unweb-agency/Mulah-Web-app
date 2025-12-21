@@ -18,7 +18,7 @@ const MulahFeaturesList = [
 
 const BuiltToMeetPeople = () => {
   return (
-    <div className='relative w-full'>
+    <div className='relative w-full' id='features'>
       <Container className='flex flex-col gap-20 md:gap-30 lg:gap-40 justify-center items-center py-10 md:py-16 lg:py-20'>
         {/* Stacked Card Features */}
         <div className='w-full rounded-xl sm:rounded-2xl md:rounded-3xl lg:rounded-4xl flex flex-col md:flex-row justify-center items-stretch shadow-2xl inset-shadow-2xl'>

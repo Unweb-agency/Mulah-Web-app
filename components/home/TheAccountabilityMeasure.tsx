@@ -6,8 +6,14 @@ const TheAccountabilityMeasure = () => {
   return (
     <div className='w-full relative'>
         <Container className='flex flex-col md:flex-row justify-between items-center gap-5 py-10 md:py-16 lg:py-20'>
-            <div className='w-150 h-80 bg-neutral-100 rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl'>
-
+            <div className='max-w-150 w-full rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl'>
+                <Image
+                src={"/images/pic.png"}
+                alt='img'
+                width={1000}
+                height={1000}
+                className='h-full w-full object-cover rounded-md sm:rounded-lg md:rounded-xl lg:rounded-2xl'
+                />
             </div>
 
             <div className='max-w-150 w-full flex flex-col justify-center items-center text-center md:justify-start md:items-start md:text-start'>
