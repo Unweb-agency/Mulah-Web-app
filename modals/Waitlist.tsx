@@ -33,7 +33,8 @@ const Waitlist: React.FC<WaitlistProps> = ({ onClose }) => {
         
         if (!result.success) {
             setIsError(true);
-            const errorMessage = result.error?.errors?.[0]?.message || "Invalid email";
+            // Use result.error.issues to access the error list safely
+            const errorMessage = result.error.issues[0]?.message || "Invalid email";
             toast.error(errorMessage);
             return;
         }
@@ -54,7 +55,7 @@ const Waitlist: React.FC<WaitlistProps> = ({ onClose }) => {
     }
 
     return (
-        <main className='fixed inset-0 w-screen h-screen bg-white/20 backdrop-blur-md flex justify-center items-center z-999 p-4 sm:px-6 md:px-8 lg:px-10'>
+        <main className='fixed inset-0 w-screen h-screen bg-white/60 backdrop-blur-2xl flex justify-center items-center z-999 p-4 sm:px-6 md:px-8 lg:px-10'>
             <form
                 action="/"
                 method='post'
@@ -101,7 +102,7 @@ const Waitlist: React.FC<WaitlistProps> = ({ onClose }) => {
                     {isLoading ? (
                         <>
                             Joining Waitlist
-                            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                            <Loader2 className="ml-2 h-4 w-4 animate-spin" />
                         </>
                     ) : (
                         'Continue'
