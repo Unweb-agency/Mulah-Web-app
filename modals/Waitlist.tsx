@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input'
 import React, { useState, useEffect } from 'react'
+import { createPortal } from 'react-dom';
 import { X, Loader2 } from 'lucide-react';
 import { toast } from "sonner"
 import { z } from "zod"
@@ -14,11 +15,13 @@ interface WaitlistProps {
 const emailSchema = z.string().email("Please enter a valid email address").min(1, "Email is required");
 
 const Waitlist: React.FC<WaitlistProps> = ({ onClose }) => {
+    const [mounted, setMounted] = useState(false);
     const [email, setEmail] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [isError, setIsError] = useState(false);
 
     useEffect(() => {
+        setMounted(true);
         const originalBodyOverflow = document.body.style.overflow;
         const originalHtmlOverflow = document.documentElement.style.overflow;
 
@@ -59,7 +62,9 @@ const Waitlist: React.FC<WaitlistProps> = ({ onClose }) => {
         }
     }
 
-    return (
+    if (!mounted) return null;
+
+    return createPortal(
         <main className='fixed inset-0 w-screen h-screen bg-white/20 backdrop-blur-md flex justify-center items-center z-999 p-4 sm:px-6 md:px-8 lg:px-10'>
             <form
                 action="/"
@@ -114,8 +119,9 @@ const Waitlist: React.FC<WaitlistProps> = ({ onClose }) => {
                     )}
                 </Button>
             </form>
-        </main>
-    )
+        </main>,
+        document.body
+    );
 }
 
 export default Waitlist
