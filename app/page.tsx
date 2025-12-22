@@ -7,20 +7,47 @@ import HowMulahWorks from '@/components/home/HowMulahWorks'
 import Team from '@/components/home/Team'
 import TheAccountabilityMeasure from '@/components/home/TheAccountabilityMeasure'
 import WhoMulahIsFor from '@/components/home/WhoMulahIsFor'
+import { WateryReveal } from '@/containers/SmoothReveal'
 import React from 'react'
 
 const Page = () => {
   return (
     <>
-      <Hero />
-      <BuiltForInsight />
-      <TheAccountabilityMeasure />
-      <HowMulahWorks />
-      <BuiltToMeetPeople />
-      <Team />
-      <WhoMulahIsFor />
-      <FounderLed />
-      <BePartOfWhatsComing />
+      <WateryReveal>
+        <Hero />
+      </WateryReveal>
+
+      <WateryReveal>
+        <BuiltForInsight />
+      </WateryReveal>
+
+      <WateryReveal>
+        <TheAccountabilityMeasure />
+      </WateryReveal>
+
+      <WateryReveal>
+        <HowMulahWorks />
+      </WateryReveal>
+
+      <WateryReveal>
+        <BuiltToMeetPeople />
+      </WateryReveal>
+
+      <WateryReveal>
+        <Team />
+      </WateryReveal>
+
+      <WateryReveal>
+        <WhoMulahIsFor />
+      </WateryReveal>
+
+      <WateryReveal>
+        <FounderLed />
+      </WateryReveal>
+
+      <WateryReveal>
+        <BePartOfWhatsComing />
+      </WateryReveal>
     </>
   )
 }

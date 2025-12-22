@@ -11,7 +11,7 @@ import Waitlist from '@/modals/Waitlist'
 const NavigationButtons = [
   { name: "Features", href: "#features" },
   { name: "How it Works", href: "#how-it-works" },
-  { name: "Our Team", href: "#team" },
+  { name: "Our Team", href: "#our-team" },
 ]
 
 const Navbar = () => {

@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { motion} from "motion/react"
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
@@ -18,17 +19,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${workSans.className} antialiased w-full min-h-screen flex flex-col justify-between items-center overflow-x-hidden`}
-      >
+    <html lang="en" className="scroll-smooth"> 
+      <body className={`${workSans.className} antialiased w-full min-h-screen flex flex-col items-center overflow-x-hidden`}>
         <Navbar />
-        <Toaster position="top-right" />
-        {children}
+        <Toaster position="top-center" />
+        <main className="w-full">
+           {children}
+        </main>
         <Footer />
       </body>
     </html>
