@@ -6,6 +6,7 @@ import { Badge } from '../ui/badge'
 import { Button } from '../ui/button'
 import { ArrowRight } from 'lucide-react'
 import Waitlist from '@/modals/Waitlist'
+import HeroSwiper from '../swipers/HeroSwiper'
 
 const Hero = () => {
 
@@ -14,7 +15,7 @@ const Hero = () => {
 
     return (
         <main className='w-full relative bg-neutral-100'>
-            <Container className='flex flex-col md:flex-row justify-between items-center pb-10 pt-20 sm:pt-24 md:pt-28 lg:pt-32'>
+            <Container className='flex flex-col md:flex-row justify-between items-center pb-10 pt-20 sm:pt-24 md:pt-28 lg:pt-32 gap-x-10 gap-y-8'>
 
                 {/* Top and Left container */}
                 <div className='max-w-175 w-full flex flex-col justify-center items-center text-center md:justify-start md:items-start md:text-start gap-y-6 sm:gap-y-6.5 md:gap-y-7 lg:gap-y-7.5'>
@@ -62,8 +63,8 @@ const Hero = () => {
                 </div>
 
                 {/* Bottom and Right Container */}
-                <div>
-
+                <div className='max-w-140 w-full'>
+                    <HeroSwiper />
                 </div>
             </Container>
 
