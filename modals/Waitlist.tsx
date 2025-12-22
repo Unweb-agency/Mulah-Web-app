@@ -60,7 +60,7 @@ const Waitlist: React.FC<WaitlistProps> = ({ onClose }) => {
     }
 
     return (
-        <main className='fixed inset-0 w-screen h-screen bg-white/60 backdrop-blur-2xl flex justify-center items-center z-999 p-4 sm:px-6 md:px-8 lg:px-10'>
+        <main className='fixed inset-0 w-screen h-screen bg-white/20 backdrop-blur-md flex justify-center items-center z-999 p-4 sm:px-6 md:px-8 lg:px-10'>
             <form
                 action="/"
                 method='post'

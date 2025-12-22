@@ -6,16 +6,23 @@
   align-items: center;
   min-height: 500px; 
   width: 100%;
+  /* Fix: Prevent the stack of cards from causing horizontal scroll */
+  overflow: hidden; 
+  position: relative;
 }
 
 .mySwiper {
   width: 280px; 
   height: 450px;
+  /* Fix: Ensures the cards effect is clipped if it reaches viewport edges */
+  overflow: visible; 
 }
 
 .swiper-slide {
   position: relative;
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+  /* Judicious shadow: large spreads (50px) can sometimes bleed. 
+     Reduced slightly for better mobile performance */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   user-select: none;
   overflow: hidden;
