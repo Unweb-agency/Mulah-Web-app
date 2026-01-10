@@ -4,13 +4,13 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { motion} from "motion/react"
+import { motion } from "motion/react";
+import IntroWrapper from "./introWrapper";
 
 const workSans = Work_Sans({
   variable: "--font-work-sans",
   subsets: ["latin"],
 });
-
 
 export const metadata: Metadata = {
   title: "Mulah",
@@ -21,12 +21,15 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="scroll-smooth"> 
-      <body className={`${workSans.className} antialiased w-full min-h-screen flex flex-col items-center overflow-x-hidden`}>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${workSans.className} antialiased w-full min-h-screen flex flex-col items-center overflow-x-hidden`}
+      >
         <Navbar />
         <Toaster position="top-center" />
         <main className="w-full">
-           {children}
+          <link rel="preload" as="video" href="/intro.mp4" />
+          <IntroWrapper>{children}</IntroWrapper>
         </main>
         <Footer />
       </body>
