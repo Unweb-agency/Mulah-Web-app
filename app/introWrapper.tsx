@@ -1,7 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 
-export default function IntroWrapper({ children }) {
+export default function IntroWrapper({ children }: { children: ReactNode }) {
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
