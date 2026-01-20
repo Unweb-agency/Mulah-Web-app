@@ -10,7 +10,7 @@ const currentYear = new Date().getFullYear();
 const FooterButtons = [
   { name: "Privacy Policy", href: "/privacy-policy" },
   { name: "Terms of Services", href: "/terms-of-services" },
-  { name: "Contact Us", href: "#contact" },
+  // { name: "Contact Us", href: "#contact" },
 ];
 
 // Social Icons and Links
