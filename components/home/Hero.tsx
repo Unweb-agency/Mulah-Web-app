@@ -45,7 +45,7 @@ const Hero = () => {
             <p className="max-w-100 w-full leading-tight text-neutral-600  text-[12.5px] md:text-sm lg:text-base text-center md:text-justify">
               Powered by an intelligent, adaptive AI agent, Mülah observes
               patterns, asks the right questions, and creates space for
-              reflection without judgment.By blending financial intelligence
+              reflection without judgment. By blending financial intelligence
               with emotional awareness, Mülah turns everyday spending into
               clarity, accountability, and informed self-direction.
             </p>

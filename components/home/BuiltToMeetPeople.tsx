@@ -10,10 +10,10 @@ const TraditionalToolsList = [
 ];
 
 const MulahFeaturesList = [
-  "Behavior-aware insights",
-  "Adaptive systems for real life",
-  "Reflection before reaction",
-  "Personalized, empathetic guidance",
+  "See your money. See yourself.",
+  "Smart insights that understand your habits.",
+  "Reflect before you react.",
+  "Guidance that’s personal, empathetic, and real.",
 ];
 
 const BuiltToMeetPeople = () => {

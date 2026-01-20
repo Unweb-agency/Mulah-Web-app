@@ -28,7 +28,6 @@ export default function RootLayout({
         <Navbar />
         <Toaster position="top-center" />
         <main className="w-full">
-          <link rel="preload" as="video" href="/intro.mp4" />
           <IntroWrapper>{children}</IntroWrapper>
         </main>
         <Footer />

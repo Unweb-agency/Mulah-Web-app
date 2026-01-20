@@ -7,6 +7,7 @@ import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import Waitlist from "@/modals/Waitlist";
+import Image from "next/image";
 
 const NavigationButtons = [
   { name: "Features", href: "/#features" },
@@ -33,10 +34,16 @@ const Navbar = () => {
             <div className="flex flex-row justify-center items-center gap-1.5">
               <Link href={"/"}>
                 <p className="font-bold text-xl md:text-2xl lg:text-3xl tracking-tighter">
-                  Ü
+                  <Image
+                    src="/logo.png"
+                    alt="logo"
+                    height={50}
+                    width={50}
+                    className="h-[60px] w-[60px]"
+                  />
                 </p>
               </Link>
-              <div className="h-1.5 md:h-2 w-1.5 md:w-2 bg-brandOrange rounded-full animate-spin"></div>
+              {/* <div className="h-1.5 md:h-2 w-1.5 md:w-2 bg-brandOrange rounded-full animate-spin"></div> */}
             </div>
 
             {/* Desktop */}

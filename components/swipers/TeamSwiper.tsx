@@ -21,14 +21,14 @@ const teamData = [
     name: "Dajour Smith",
     position: "Founder & CEO",
     img: "/images/Dajour.jpeg",
-    bio: "Building MÜLAH to make money management more human. Focused on blending financial intelligence with emotional awareness.",
+    bio: "The mind behind MÜLAH’s vision and innovation. Crafting a platform that fuses financial intelligence with emotional insight to rethink how people relate to money.",
   },
   {
     id: 2,
     name: "Savannah Smith",
     position: "Co-Founder",
     img: "/images/Savannah.jpeg",
-    bio: "Defining the emotional intelligence core of MÜLAH. Bridging sociology and real-world financial behavior.",
+    bio: "Shaping the emotional intelligence at the heart of MÜLAH. Connecting sociology with real-world financial behavior to help people thrive.",
   },
   {
     id: 3,

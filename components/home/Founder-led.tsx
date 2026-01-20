@@ -19,7 +19,7 @@ const FounderLed = () => {
             real, the direction is clear, and the work is ongoing.
           </p>
           <p className="text-gray-500 font-medium text-sm md:text-base mt-3.5 sm:mt-4 md:mt-4.5 lg:mt-5 leading-tight">
-            We&apos; learning alongside our users—continuously refining how
+            We&apos;re learning alongside our users—continuously refining how
             financial intelligence and emotional awareness come together in
             practical, meaningful ways.
           </p>
