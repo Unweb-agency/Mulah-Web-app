@@ -6,7 +6,7 @@ const TraditionalToolsList = [
   "Numbers without context",
   "Rigid  budgets that break",
   "Reactive alerts & shame",
-  "One-size-fits all adive",
+  "One-size-fits all advice",
 ];
 
 const MulahFeaturesList = [
